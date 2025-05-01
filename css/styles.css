@@ -1,0 +1,436 @@
+.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	word-wrap: normal !important;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+	border: 2px solid #00a0d2; /* Blue */
+}
+
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7 form.resetting .wpcf7-response-output,
+.wpcf7 form.submitting .wpcf7-response-output {
+	display: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450; /* Green */
+}
+
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+	border-color: #dc3232; /* Red */
+}
+
+.wpcf7 form.spam .wpcf7-response-output {
+	border-color: #f56e28; /* Orange */
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+	border-color: #ffb900; /* Yellow */
+}
+
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+.wpcf7-not-valid-tip {
+	color: #dc3232; /* Red */
+	font-size: 1em;
+	font-weight: normal;
+	display: block;
+}
+
+.use-floating-validation-tip .wpcf7-not-valid-tip {
+	position: relative;
+	top: -2ex;
+	left: 1em;
+	z-index: 100;
+	border: 1px solid #dc3232;
+	background: #fff;
+	padding: .2em .8em;
+	width: 24em;
+}
+
+.wpcf7-list-item {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
+.wpcf7-list-item-label::before,
+.wpcf7-list-item-label::after {
+	content: " ";
+}
+
+.wpcf7-spinner {
+	visibility: hidden;
+	display: inline-block;
+	background-color: #23282d; /* Dark Gray 800 */
+	opacity: 0.75;
+	width: 24px;
+	height: 24px;
+	border: none;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0 24px;
+	position: relative;
+}
+
+form.submitting .wpcf7-spinner {
+	visibility: visible;
+}
+
+.wpcf7-spinner::before {
+	content: '';
+	position: absolute;
+	background-color: #fbfbfc; /* Light Gray 100 */
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border: none;
+	border-radius: 100%;
+	transform-origin: 8px 8px;
+	animation-name: spin;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpcf7-spinner::before {
+		animation-name: blink;
+		animation-duration: 2000ms;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.wpcf7 [inert] {
+	opacity: 0.5;
+}
+
+.wpcf7 input[type="file"] {
+	cursor: pointer;
+}
+
+.wpcf7 input[type="file"]:disabled {
+	cursor: default;
+}
+
+.wpcf7 .wpcf7-submit:disabled {
+	cursor: not-allowed;
+}
+
+.wpcf7 input[type="url"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"] {
+	direction: ltr;
+}
+
+.wpcf7-reflection > output {
+	display: list-item;
+	list-style: none;
+}
+
+.wpcf7-reflection > output[hidden] {
+	display: none;
+}
+.card_btn {
+	display: inline;
+	background-color: #59815B;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    color: #fafafa;
+    padding: 7px 13px 7px 13px;
+}
+
+@media screen and (max-width: 575px) {
+	
+  }
+
+  section#aloqa {
+	padding: 40px 0;
+	display: flex;
+	justify-content: center;
+  }
+  section#aloqa .sina-title-title {
+    font-family: "Covered By Your Grace", Sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 42px;
+    color: #59815B;
+    margin: 0px 0px 20px 0px;
+	text-align: center;
+}
+
+section#aloqa .sina-title-subtitle {
+    font-family: "Oswald", Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+.form-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+	margin: 10px 0 0 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+section#aloqa form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500!important;
+	font-family: "Montserrat", Sans-serif;
+	font-size: 16px;
+	color: #292929;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 23px 20px!important;
+    border: 1px solid #59815B!important;
+    border-radius: 5px;
+	font-size: 15px!important;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+	font-family: "Montserrat", Sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    border-color: #59815B;
+    outline: none;
+}
+section#aloqa form input::placeholder {
+	color: #888888;
+}
+
+button {
+    width: 100%;
+	background-color: #59815B;
+    padding: 18px 30px 18px 30px;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+	font-size: 18px;
+
+    border-radius: 5px;
+    cursor: pointer;
+	text-transform: uppercase!important;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #58A05C;
+}
+
+.call_to_action_img {
+	max-width: 500px;
+}
+.call_to_action_img img {
+	max-width: 100%;
+	position: relative;
+	bottom: 100px;
+	z-index: 2;
+}
+@media screen and (max-width: 575px) {
+	section#aloqa .sina-title-subtitle {
+		font-size: 32px;
+	}
+	.form-container {
+		width: 320px;
+		margin: 0 auto;
+	}
+	.call_to_action_img {
+		max-width: 370px;
+	}
+	.call_to_action_img img {
+		bottom: 0;
+		left: 25px;
+	}
+	#sharhlar .sina-title-subtitle {
+		font-size: 28px!important;
+	}
+  }
+
+  .old-price {
+	text-decoration: line-through;
+	color: #e76b6b!important;
+	font-size: 16px!important;
+	margin-right: 5px;
+  }
+
+  .sale_tip {
+	width: 180px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #db5959;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+
+	position: absolute;
+	right: 0;
+	top: 20px;
+  }
+
+  #timer {
+	display: flex;
+	gap: 6px;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+	justify-content: center;
+	
+	text-align: center;
+}
+.digit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 50px;
+	text-align: center;
+	
+	border-radius: 0px;
+	color: #fff;
+	background: rgb(221 53 49 / 98%);
+	box-shadow: 0 4px 9px rgb(219 79 79 / 64%);
+	font-family: "Oswald", Sans-serif;
+}
+.timer_block {
+	padding: 0 20px;
+	text-align: center;
+	margin: 0 auto;
+}
+.timer_block p {
+	font-size: 13px;
+	line-height: 1.2;
+	margin: 0;
+
+}
+
+
+.timer_title {
+	font-size: 21px;
+	font-weight: 600;
+	color: #dd3531;
+	font-family: "Montserrat", Sans-serif;
+	margin-bottom: 8px;
+}
+.timer_text {
+	padding: 20px 0 15px 0!important;
+	color: dimgray;
+	width: 300px;
+}
+
+.mybtn {
+    width: 100%;
+	background-color: #59815B;
+    padding: 15px 20px 15px 20px!important;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px!important;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+	font-size: 18px;
+
+    cursor: pointer;
+	text-transform: uppercase!important;
+    transition: background-color 0.3s ease;
+}
+
+.mybtn:hover {
+    background-color: #58A05C;
+	color: #fff!important;
+}
+
+#tours_list p {
+	margin-bottom: 6px!important;
+}
+.text_bold {
+	font-weight: bold;
+}
+.header_sale_text {
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+.aydarkol_section .elementor-widget-wrap {
+	background-image: url("../images/aydarkol.jpg")!important;
+}
+
+.samarqand_section .elementor-widget-wrap {
+	background-image: url("../images/samarqand.jpg")!important;
+}
+
+.turkiston_section .elementor-widget-wrap {
+	background-image: url("../images/turkiston.jpg")!important;
+}
+
+.sina-review-comment img {
+	width: 70%!important;
+}
+
+#sharhlar .sina-title-subtitle {
+	font-family: "Oswald", Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+    margin: 50px 0px 20px 0px;
+}
