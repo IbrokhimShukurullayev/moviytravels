@@ -7464,7 +7464,7 @@
 
 
 					<div class="form-container">
-						<form action="telegram.php" method="post">
+						<form id="telegramForm">
 							<div class="form-group">
 								<label for="name">Ismingiz:</label>
 								<input type="text" id="name" name="name" placeholder="Ismingizni yozing" required>
@@ -7472,10 +7472,10 @@
 							<div class="form-group">
 								<label for="phone">Telefon raqamingiz:</label>
 								<input class="order-form-field order-form-field-user-phone"
-									placeholder="Telefon raqamingizni yozing" type="text" id="phone_input" name="phone"
-									value="+998" maxlength="13" required oninput="validatePhone(event)"
-									pattern="\+998\d{9}" onkeydown="preventDeletion(event)"
-									onfocus="enforcePrefix(event)">
+								placeholder="Telefon raqamingizni yozing" type="text" id="phone" name="phone"
+								value="+998" maxlength="13" required oninput="validatePhone(event)"
+								pattern="\+998\d{9}" onkeydown="preventDeletion(event)"
+								onfocus="enforcePrefix(event)">
 							</div>
 							<button type="submit">Jo'natish</button>
 						</form>
@@ -7590,6 +7590,38 @@
 		}
 
 		updateTimer();
+	</script>
+	<script>
+		document.getElementById('telegramForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+
+    const token = '7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg';
+    const chatId = '-4267196528';
+    const message = `Ism: ${name}\nTelefon: ${phone}`;
+
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.ok) {
+      // Yuborish muvaffaqiyatli bo‘lsa
+      window.location.href = 'thankyou.html'; // Istasangiz bu sahifani yarating
+    } else {
+      alert('Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.');
+    }
+  });
 	</script>
 	<script data-cfasync="false" src="js/email-decode.min.js"></script>
 	<script>
