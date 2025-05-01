@@ -5,8 +5,8 @@ export default async function handler(req, res) {
 
   const { name, phone, pixel } = req.body;
 
-  const token = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
-  const chat_id = "-4267196528";
+  const token = "7522239457:AAHTSgzT2n48lnDU4RhwYTsLysoLIelkbSI";
+  const chat_id = "-1002180572908";
 
   const message = `Имя: ${name}\nТелефон: ${phone}`;
 
@@ -26,12 +26,10 @@ export default async function handler(req, res) {
 
     if (data.ok) {
       // Agar kerak bo‘lsa — frontend thankyou sahifaga yo‘naltirsin
-      res
-        .status(200)
-        .json({
-          success: true,
-          redirect: `/thankyou.html?name=${name}&phone=${phone}&pixel=${pixel}`,
-        });
+      res.status(200).json({
+        success: true,
+        redirect: `/thankyou.html?name=${name}&phone=${phone}&pixel=${pixel}`,
+      });
     } else {
       res
         .status(500)
